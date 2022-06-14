@@ -30,3 +30,25 @@ console.log(peopleNames);
 const ages = [42, 60, 35, 85, 20, 71, 92, 52];
 const agesThanFifty = ages.filter((age) => age > 50);
 console.log(agesThanFifty);
+
+//Es un array Find
+//Caso de uso: Quiero identificar entre los alumnos el alumno o alumna con la matricula 200031.
+const students =[
+    {
+        id:200031,
+        name: "Naomi Ramos",
+        career: "Ingenieria en Sistemas",
+    },
+    {
+        id:190935,
+        name: "Maria Legorreta",
+        career: "Ingenieria Industiral",
+    },
+    {
+        id:161000,
+        name: "Jesus Chacon",
+        career: "Liceniatura en Administración de Empresas",
+    },
+];
+    const filterStudents = students.find(student => student.id === 200031);
+    console.log(filterStudents);
