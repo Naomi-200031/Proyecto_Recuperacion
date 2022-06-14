@@ -79,3 +79,10 @@ console.log(grouped);
 const family = [19, 48, 63, 52, 24, 39, 77, 81, 90];
 const indexOfFive = family.findIndex((number) => number === 24);
 console.log(indexOfFive);
+
+//Es una array replace
+//Caso de uso: En la veteriana se equivocaron de palabras y quieren cambiar tortuga por mono y liebre por oso.
+const p = 'At the vet we did a test, the fast hare ran to one side of the slow turtle. If the turtle wins the test. Did the hare really trust?';
+console.log(p.replace('turtle', 'monkey'));
+const regex = /turtle/i;
+console.log(p.replace(regex, 'bear'));
