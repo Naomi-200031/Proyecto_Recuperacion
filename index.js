@@ -52,3 +52,24 @@ const students =[
 ];
     const filterStudents = students.find(student => student.id === 200031);
     console.log(filterStudents);
+
+    //Es un array Reduce
+//Caso de uso: Una tienda de abarrotes desea saber el total de productos para su inventario.
+const items = [
+    { HandsSoap: 48 },
+    { Shampoo: 20 },
+    { BodyCream: 45 },
+    { Shampoo: 60 },
+    { HandsSoap: 40 },
+    { Toothbrush: 20 },
+    { BodyCream: 56 },
+    { Toothbrush: 63 }
+];
+const grouped = items.reduce((acc, item) => {
+    for (let prop in item) {
+        if (acc.hasOwnProperty(prop)) acc[prop] += item[prop];
+        else acc[prop] = item[prop];
+    }
+    return acc;
+}, {});
+console.log(grouped);
