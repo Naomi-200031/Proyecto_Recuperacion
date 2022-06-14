@@ -25,3 +25,8 @@ const returName = function(people)
 const peopleNames = name.map(returName);
 console.log(peopleNames);
 
+//Es un array Filter
+//Caso de uso: Quiero saber las edades que son mayores a 50.
+const ages = [42, 60, 35, 85, 20, 71, 92, 52];
+const agesThanFifty = ages.filter((age) => age > 50);
+console.log(agesThanFifty);
