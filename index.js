@@ -94,3 +94,69 @@ DogName("Diamante");
 function DogName(name) {
   console.log("The name of my dog is " + name);
 }
+
+//Es un funcion promesa.
+//Caso de uso: Un cliente desea obtener el nombre de cada usuario con sus respectivos gustos
+const getUsers = async() => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve([{
+                    id: 1,
+                    name: "Naomi",
+                },
+                {
+                    id: 2,
+                    name: "Arlette",
+                },
+            ]);
+        }, 3000);
+    });
+};
+
+const getCategories = async() => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve([{
+                    id: 1,
+                    name: "Laugh",
+                },
+                {
+                    id: 2,
+                    name: "Sleep",
+                },
+            ]);
+        }, 100);
+    });
+};
+
+const getReports = async() => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve([{
+                    id: 1,
+                    name: "Play Softball",
+                },
+                {
+                    id: 2,
+                    name: "Eat Fast Food",
+                },
+            ]);
+        }, 300);
+    });
+};
+
+(async function main() {
+    try {
+        const users = await getUsers();
+        console.log(users);
+        console.log(users.length);
+        const categories = await getCategories();
+        console.log(categories);
+        console.log(categories.length);
+        const reports = await getReports();
+        console.log(reports);
+        console.log(reports.length);
+    } catch (error) {
+        console.log("Error: " + error);
+    }
+})();
