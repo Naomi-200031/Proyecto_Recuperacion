@@ -86,3 +86,11 @@ const p = 'At the vet we did a test, the fast hare ran to one side of the slow t
 console.log(p.replace('turtle', 'monkey'));
 const regex = /turtle/i;
 console.log(p.replace(regex, 'bear'));
+
+//Es un array Hoisting.
+//Caso de uso: Mi mamá quiere sabe el nombre de la perrita que a cabo de adoptar.
+DogName("Diamante");
+
+function DogName(name) {
+  console.log("The name of my dog is " + name);
+}
