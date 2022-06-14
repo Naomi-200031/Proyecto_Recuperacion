@@ -73,3 +73,9 @@ const grouped = items.reduce((acc, item) => {
     return acc;
 }, {});
 console.log(grouped);
+
+//Es un array findIndex
+// Caso de uso: Quiero saber en que posición se encuentra mi primo que tiene 24 años, entre algunas edades de mi familia. 
+const family = [19, 48, 63, 52, 24, 39, 77, 81, 90];
+const indexOfFive = family.findIndex((number) => number === 24);
+console.log(indexOfFive);
